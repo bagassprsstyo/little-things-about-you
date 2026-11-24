@@ -1,0 +1,568 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap');
+
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #fff9f7;
+  color: #765b68;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.page {
+  min-height: 100vh;
+  min-height: 100svh;
+  min-height: 100dvh;
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+  overflow-x: clip;
+  overflow-y: visible;
+  position: relative;
+  background:
+    radial-gradient(ellipse at 10% 10%, #ffe4ed 0, transparent 35%),
+    radial-gradient(ellipse at 90% 35%, #eee5ff 0, transparent 35%),
+    #fff9f7;
+}
+
+.navbar {
+  max-width: 1100px;
+  margin: auto;
+  padding: 28px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 23px;
+  color: #bb829e;
+}
+
+.nav-note {
+  font-size: 11px;
+  letter-spacing: 1px;
+  color: #b49aa7;
+}
+
+.hero {
+  text-align: center;
+  padding: 100px 20px 125px;
+  position: relative;
+}
+
+.eyebrow, .section-label {
+  color: #c28ba6;
+  font-size: 10px;
+  letter-spacing: 3px;
+  font-weight: 700;
+}
+
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(55px, 10vw, 94px);
+  line-height: 1.08;
+  margin: 28px 0 20px;
+  color: #765a6b;
+  font-weight: 500;
+}
+
+.hero h1 span {
+  color: #d18eac;
+  font-style: italic;
+}
+
+.hero > p {
+  color: #a78e9a;
+  line-height: 1.9;
+  font-size: 14px;
+}
+
+.hero-decoration {
+  color: #d9a1bd;
+  font-size: 35px;
+  margin: 25px;
+}
+
+.main-button {
+  display: inline-block;
+  background: #d99bb7;
+  color: white;
+  padding: 15px 28px;
+  border-radius: 40px;
+  text-decoration: none;
+  font-size: 12px;
+  box-shadow: 0 8px 25px #d99bb744;
+  transition: .25s;
+}
+
+.main-button:hover {
+  transform: translateY(-4px);
+  background: #c986a6;
+}
+
+.sparkle {
+  position: absolute;
+  color: #d9a5bf;
+  animation: float 4s ease-in-out infinite;
+}
+
+.sparkle1 { top: 180px; left: 12%; font-size: 28px; }
+.sparkle2 { top: 330px; right: 13%; font-size: 32px; }
+.sparkle3 { top: 510px; left: 20%; font-size: 22px; }
+
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(0); }
+  50% { transform: translateY(-14px) rotate(12deg); }
+}
+
+.memories {
+  max-width: 1050px;
+  margin: auto;
+  padding: 60px 25px 110px;
+  text-align: center;
+}
+
+.memories h2, .note h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(32px, 5vw, 48px);
+  font-weight: 500;
+  margin: 18px 0 10px;
+  color: #795d6e;
+}
+
+.section-desc {
+  color: #b49ba7;
+  font-size: 13px;
+  margin-bottom: 45px;
+}
+
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.photo-card {
+  position: relative;
+  background: #fff;
+  padding: 13px 13px 25px;
+  border: 1px solid #f3e5eb;
+  border-radius: 18px;
+  box-shadow: 0 12px 35px #b88ca515;
+  transition: .3s;
+}
+
+.photo-card:hover {
+  transform: translateY(-8px) rotate(-1deg);
+}
+
+.photo-placeholder {
+  height: 230px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  font-size: 55px;
+  color: #c58eaa;
+  background: linear-gradient(145deg, #fce2ed, #f1eaff);
+}
+
+.photo-two .photo-placeholder {
+  background: linear-gradient(145deg, #f5e5ed, #fcebdc);
+}
+
+.photo-three .photo-placeholder {
+  background: linear-gradient(145deg, #eae3fa, #fce5ee);
+}
+
+.photo-number {
+  display: block;
+  text-align: left;
+  color: #d29ab4;
+  font-size: 10px;
+  margin-top: 17px;
+  letter-spacing: 2px;
+}
+
+.photo-card h3 {
+  font-family: 'Playfair Display', serif;
+  color: #805f72;
+  font-weight: 500;
+  font-size: 19px;
+  margin: 8px 0;
+}
+
+.photo-card p {
+  font-size: 11px;
+  color: #b49ba7;
+}
+
+.note {
+  margin: 0 auto 80px;
+  max-width: 750px;
+  padding: 65px 25px;
+  text-align: center;
+  background: #f9edf3;
+  border-radius: 35px;
+  width: calc(100% - 40px);
+}
+
+.note > span {
+  color: #c18ba5;
+  font-size: 11px;
+  letter-spacing: 2px;
+}
+
+.note h2 {
+  font-style: italic;
+  line-height: 1.4;
+}
+
+.note p {
+  font-size: 12px;
+  color: #b49ba7;
+}
+
+footer {
+  padding: 25px;
+  text-align: center;
+  color: #bb9dac;
+  font-size: 11px;
+  letter-spacing: 1px;
+}
+
+@media (max-width: 650px) {
+  .navbar { padding: 22px 18px; }
+  .nav-note { font-size: 9px; }
+  .hero { padding: 90px 15px 100px; }
+  .photo-grid {
+    grid-template-columns: 1fr;
+    max-width: 340px;
+    margin: auto;
+  }
+  .photo-placeholder { height: 260px; }
+  .sparkle1 { left: 5%; }
+  .sparkle2 { right: 5%; }
+}
+
+
+.photo-card.photo-two .photo-placeholder {
+  width: 100%;
+  height: auto !important;
+  aspect-ratio: 9 / 16;
+  overflow: hidden;
+  position: relative;
+}
+
+.photo-card.photo-two .photo-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain !important;
+  object-position: center;
+  display: block;
+}
+
+.photo-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.photo-card .photo-placeholder {
+  flex-shrink: 0;
+}
+
+.photo-card .photo-number {
+  margin-top: 17px;
+}
+
+.photo-card h3 {
+  margin: 8px 0;
+}
+
+.photo-card p {
+  margin-top: 0;
+}
+
+/* Samakan ukuran foto dan posisi tulisan ketiga kartu */
+.photo-card .photo-placeholder {
+  width: 100%;
+  height: auto !important;
+  aspect-ratio: 9 / 16;
+  overflow: hidden;
+  position: relative;
+}
+
+.photo-card .photo-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.photo-card.photo-one .photo-placeholder img {
+  object-position: center 35%;
+}
+
+.photo-card.photo-one .photo-placeholder {
+  aspect-ratio: 3 / 4;
+}
+
+.photo-card.photo-one .photo-placeholder img {
+  object-fit: contain !important;
+  object-position: center;
+}
+
+.photo-card.photo-three .photo-placeholder {
+  aspect-ratio: 3 / 4;
+}
+
+.photo-card.photo-three .photo-placeholder img {
+  object-fit: contain !important;
+  object-position: center;
+}
+
+.photo-card.photo-three .photo-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover !important;
+  object-position: center;
+}
+
+/* Animasi kemunculan foto */
+@keyframes photoReveal {
+  from {
+    opacity: 0;
+    filter: blur(5px);
+  }
+  to {
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+
+.photo-card {
+  animation: photoReveal 0.9s ease both;
+}
+
+.photo-card:nth-child(1) {
+  animation-delay: 0.15s;
+}
+
+.photo-card:nth-child(2) {
+  animation-delay: 0.35s;
+}
+
+.photo-card:nth-child(3) {
+  animation-delay: 0.55s;
+}
+
+/* Background dengan partikel lembut */
+.page {
+  isolation: isolate;
+}
+
+.page::before,
+.page::after {
+  content: "";
+  position: absolute;
+  inset: -20%;
+  pointer-events: none;
+  z-index: 0;
+  background-repeat: repeat;
+}
+
+.page::before {
+  opacity: 0.42;
+  background-image:
+    radial-gradient(circle, #e9a9c5 1.5px, transparent 2px),
+    radial-gradient(circle, #ffffff 2px, transparent 3px);
+  background-size: 145px 165px, 210px 230px;
+  background-position: 0 0, 70px 90px;
+  animation: particleFloat 28s linear infinite;
+}
+
+.page::after {
+  opacity: 0.3;
+  background-image:
+    radial-gradient(circle, #d9c3ef 1.5px, transparent 2px),
+    radial-gradient(circle, #ffffff 1px, transparent 2px);
+  background-size: 190px 210px, 125px 145px;
+  background-position: 40px 60px, 100px 20px;
+  animation: particleFloatReverse 36s linear infinite;
+}
+
+.page > * {
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes particleFloat {
+  from { transform: translate3d(0, 0, 0); }
+  to { transform: translate3d(-35px, -55px, 0); }
+}
+
+@keyframes particleFloatReverse {
+  from { transform: translate3d(0, 0, 0); }
+  to { transform: translate3d(30px, -45px, 0); }
+}
+
+/* Smooth interaction effects */
+.main-button,
+.photo-card {
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+.main-button {
+  transition: transform .25s ease, box-shadow .25s ease, background .25s ease;
+}
+
+.main-button:active {
+  transform: scale(.94);
+  box-shadow: 0 3px 12px #d99bb744;
+}
+
+.photo-card {
+  transition: transform .35s ease, box-shadow .35s ease;
+}
+
+.photo-card:active {
+  transform: scale(.97);
+  box-shadow: 0 6px 20px #b88ca530;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+  }
+}
+
+/* Welcome intro: particles form a heart */
+.welcome-intro {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse at center, #fff0f6 0%, #fce8f1 48%, #eee5ff 100%);
+  animation: welcomeFadeOut 1s ease 3.8s forwards;
+}
+
+.heart-particles {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.heart-particle {
+  position: absolute;
+  left: 0;
+  top: 0;
+  will-change: transform, opacity;
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  opacity: 0;
+  background: #e99cbd;
+  box-shadow: none;
+  animation: gatherHeart 2.5s cubic-bezier(.2,.7,.25,1) var(--delay) forwards;
+}
+
+.heart-particle:nth-child(3n) {
+  background: #fff;
+  box-shadow: none;
+}
+
+.heart-particle:nth-child(3n + 1) {
+  background: #c9a9e8;
+  box-shadow: none;
+}
+
+.welcome-message {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: #98647f;
+  opacity: 0;
+  transform: translateY(12px) scale(.9);
+  animation: welcomeText 1s ease 2.1s forwards;
+  text-shadow: 0 2px 18px #ffffffaa;
+}
+
+.welcome-message p {
+  margin: 0 0 7px;
+  font-size: clamp(17px, 4vw, 22px);
+  letter-spacing: 2px;
+}
+
+.welcome-message h2 {
+  margin: 0;
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(30px, 8vw, 48px);
+  font-weight: 600;
+  color: #c16f9a;
+}
+
+.welcome-flower {
+  display: inline-block;
+  margin: 12px 8px 0;
+  color: #d99abb;
+  font-size: 25px;
+  animation: flowerFloat 2s ease-in-out infinite;
+}
+
+@keyframes gatherHeart {
+  0% {
+    opacity: 0;
+    transform: translate3d(var(--start-x), var(--start-y), 0) scale(.4);
+  }
+  15% {
+    opacity: 1;
+  }
+  100% {
+    opacity: .95;
+    transform: translate3d(var(--end-x), var(--end-y), 0) scale(1.15);
+  }
+}
+
+@keyframes welcomeText {
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes flowerFloat {
+  50% {
+    transform: translateY(-5px) rotate(10deg);
+  }
+}
+
+@keyframes welcomeFadeOut {
+  to {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .welcome-intro,
+  .heart-particle,
+  .welcome-message,
+  .welcome-flower {
+    animation-duration: .01ms !important;
+    animation-delay: 0ms !important;
+  }
+}
